@@ -9,6 +9,21 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <body>
   </head>
-    <h1>Bot's User Name: <%= bot.user.username %></h1>
+    <%
+      // UpTime Caculator Start
+      let totalSeconds = (bot.uptime / 1000)
+      let days = Math.floor(totalSeconds / 86400)
+      let hours = Math.floor(totalSeconds / 3600)
+      totalSeconds %= 3600;
+      let minutes = Math.floor(totalSeconds / 60)
+      let seconds = Math.floor(totalSeconds % 60)
+      // UpTime Caculator End
+    %>
+
+    <h1>Testing...</h1>
+
+    <h1><%= bot.user.username %>: Total <%= bot.guilds.size %> Servers</h1>
+    <h1><%= 업타임', days + '일 ' + hours + '시간 ' + minutes + '분 ' + seconds + '초' %></h1>
+    
   </body>
 </html>
