@@ -1,0 +1,26 @@
+{
+  "name": "seoawebejs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/seoaapp/SeoaWebEJS.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/seoaapp/SeoaWebEJS/issues"
+  },
+  "homepage": "https://github.com/seoaapp/SeoaWebEJS#readme",
+  "dependencies": {
+    "discord.js": "^11.5.1",
+    "ejs": "^2.6.2",
+    "express": "^4.17.1",
+    "superagent": "^5.1.0"
+  }
+}
