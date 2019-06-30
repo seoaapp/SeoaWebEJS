@@ -1,0 +1,26 @@
+body {
+  background: rgb(217,160,255);
+  background: linear-gradient(90deg, rgba(217,160,255,1) 0%, rgba(255,182,233,1) 72%, rgba(255,210,238,1) 100%); 
+}
+
+nav, .navbar-brand {
+  font-size: 35px !important
+}
+
+.navbar-brand {
+  margin-right: 30px !important
+}
+
+.dropdown-menu {
+  background-color: #ffffff50 !important
+}
+
+#render {
+  margin-top: 30vh;
+  font-size: 50px;
+  color: #fffffff0
+}
+
+.cycle {
+  display: none
+}

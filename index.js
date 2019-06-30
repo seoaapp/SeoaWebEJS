@@ -10,7 +10,7 @@
 'use strict' // 엄격모드 진입
 
 /** WebServer Port */
-const PORT = 5820
+const PORT = 5000
 
 /** express 모듈 */
 const express = require('express')
@@ -34,7 +34,19 @@ start((bot) => {
       res.send(data)
     })
   })
-  
+
+  app.get('/src/img/logo.png', (req, res) => {
+    res.download(__dirname + '/views/src/img/logo.png')
+  })
+
+  app.get('/src/index.js', (req, res) => {
+    res.download(__dirname + '/views/src/index.js')
+  })
+
+  app.get('/src/index.css', (req, res) => {
+    res.download(__dirname + '/views/src/index.css')
+  })
+
   app.listen(PORT)
 })
 

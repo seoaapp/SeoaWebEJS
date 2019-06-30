@@ -20,6 +20,7 @@
   "dependencies": {
     "discord.js": "^11.5.1",
     "ejs": "^2.6.2",
+    "ejs-lint": "^0.3.0",
     "express": "^4.17.1",
     "superagent": "^5.1.0"
   }
