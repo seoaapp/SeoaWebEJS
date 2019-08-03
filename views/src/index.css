@@ -7,15 +7,12 @@
   background: #151720;
   width:100%;
 }
-
 nav, .navbar-brand {
   font-size: 35px !important
 }
-
 .navbar-brand {
   margin-right: 30px !important
 }
-
 .dropdown-menu {
   background-color: #ffffff50 !important
 }
@@ -37,24 +34,6 @@ nav, .navbar-brand {
   display: flex;
   height:87vh;
   color:#151720 !important;
-}
-.list-group-item{
-  margin-top: 30px;
-  margin-left: 15px;
-  padding: 0px;
-  border: 0px;
-}
-
-.card{
-  margin: 30px;
-}
-
-#n1{
-  margin-left: 32vw;
-}
-
-#n2{
-  margin-left: 10vw;
 }
 #footer{
   height:13vh;
