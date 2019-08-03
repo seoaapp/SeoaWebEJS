@@ -1,6 +1,11 @@
-body {
-  background: rgb(217,160,255);
-  background: linear-gradient(90deg, rgba(217,160,255,1) 0%, rgba(255,182,233,1) 72%, rgba(255,210,238,1) 100%); 
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+#top {
+  background: #07889B;
+  width:100%;
 }
 
 nav, .navbar-brand {
@@ -14,13 +19,38 @@ nav, .navbar-brand {
 .dropdown-menu {
   background-color: #ffffff50 !important
 }
-
+.btn-outline-2{
+  color:#E37222;
+  border-color:#E37222;
+}
+.btn-outline-2:hover{
+  background-color:#E37222;
+  color:#ffffff;
+}
 #render {
-  margin-top: 30vh;
+  margin-top: 20vh;
   font-size: 50px;
-  color: #fffffff0
+  color: #fffffff0;
+}
+#commands{
+  background: #66B9BF;
+  display: flex;
+}
+.list-group-item{
+  margin-top: 30px;
+  margin-left: 15px;
+  padding: 0px;
+  border: 0px;
 }
 
-.cycle {
-  display: none
+.card{
+  margin: 30px;
+}
+
+#n1{
+  margin-left: 32vw;
+}
+
+#n2{
+  margin-left: 10vw;
 }
