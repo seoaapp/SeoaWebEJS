@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="/src/index.css">
   </head>
   <body>
-    <div id='top'class='container-fluid vh-100'>
+    <div id='top' class='container-fluid vh-100'>
       <nav class="navbar navbar-expand-sm navbar-dark">
         <a class="navbar-brand" href="/"><img src="/src/img/logo.png" height="50" width="50">SeoaBot</a>
         <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
@@ -58,38 +58,74 @@
         </div>
       </div>
     </div>
-      <div id="commands">
-        <div class="card" style="width: 18rem;" id="n1">
-        <div class="card-header">
-          Commands - 1
-        </div>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item">>help: 도움말을 보여 줍니다</li>
-          <li class="list-group-item">>invite: 초대링크를 줍니다</li>
-          <li class="list-group-item">>join: 보이스 채널에 들어옵니다</li>
-          <li class="list-group-item">>leaderboard: 리더보드를 보여 줍니다</li>
-          <li class="list-group-item">>leave: 음성 채널을 나갑니다</li>
-          <li class="list-group-item"></li>
-        </ul>
-      </div>
-
-      <br><br><br>
-
-      <div class="card" style="width: 18rem;"id="n2">
-      <div class="card-header">
-        Commands - 2
-      </div>
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item">>play: 노래를 재생합니다</li>
-        <li class="list-group-item"></li>
-        <li class="list-group-item">>quiz point: 퀴즈 포인트를 볼 수 있습니다</li>
-        <li class="list-group-item">>quiz: 프로그래밍에 대한 퀴즈를 풀 수 있습니다</li>
-        <li class="list-group-item">>search: Youtue에서 검색합니다</li>
-        <li class="list-group-item"></li>
-        <li class="list-group-item">>settings: 서버 설정을 합니다</li>
-        <li class="list-group-item"></li>
-      </ul>
+    <div id="commands">
+      <table class="table table-bordered" style="margin: 30px">
+        <thead>
+          <tr>
+            <th scope="col" class='border-dark'>#</th>
+            <th scope="col" class='border-dark'>Command</th>
+            <th scope="col" class='border-dark'>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row" class='border-dark'>1</th>
+            <td class='border-dark'>&gt;help</td>
+            <td class='border-dark'>도움말을 보여줍니다</td>
+          </tr>
+          <tr>
+            <th scope="row" class='border-dark'>2</th>
+            <td class='border-dark'>&gt;invite</td>
+            <td class='border-dark'>Seoa봇 초대링크를 줍니다</td>
+          </tr>
+          <tr>
+            <th scope="row" class='border-dark'>3</th>
+            <td class='border-dark'>&gt;join</td>
+            <td class='border-dark'>보이스 채널에 들어옵니다</td>
+          </tr>
+          <tr>
+            <th scope="row" class='border-dark'>4</th>
+            <td class='border-dark'>&gt;leave</td>
+            <td class='border-dark'>보이스 채널을 나갑니다</td>
+          </tr>
+          <tr>
+            <th scope="row" class='border-dark'>5</th>
+            <td class='border-dark'>&gt;search</td>
+            <td class='border-dark'>YouTube에서 검색합니다</td>
+          </tr>
+          <tr>
+            <th scope="row" class='border-dark'>6</th>
+            <td class='border-dark'>&gt;play</td>
+            <td class='border-dark'>노래를 재생해드릴께요~</td>
+          </tr>
+          <tr>
+            <th scope="row" class='border-dark'>7</th>
+            <td class='border-dark'>&gt;quiz</td>
+            <td class='border-dark'>프로그래밍에 대한 퀴즈를 풀 수 있습니다</td>
+          </tr>
+          <tr>
+            <th scope="row" class='border-dark'>8</th>
+            <td class='border-dark'>&gt;quiz point</td>
+            <td class='border-dark'>퀴즈 포인트를 볼 수 있습니다</td>
+          </tr>
+          <tr>
+            <th scope="row" class='border-dark'>9</th>
+            <td class='border-dark'>&gt;leaderboard</td>
+            <td class='border-dark'>리더보드를 보여줍니다</td>
+          </tr>
+          <tr>
+            <th scope="row" class='border-dark'>10</th>
+            <td class='border-dark'>&gt;settings</td>
+            <td class='border-dark'>서버 설정을 합니다</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
+      <div id="footer" class='text-light text-center text-xs-center d-flex justify-content-center' style='display: flex; align-items: center;'>
+        <span class='align-middle text-center'>
+        Copyright &copy; 2019 Seoa Development Team. MIT Licensed.
+        </span>
+      </div>
     </div>
     <%
       let totalSeconds = new Date(new Date() - bot.user.createdAt).getTime() / 1000
