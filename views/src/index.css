@@ -1,13 +1,16 @@
-*{
+* {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
   scroll-behavior: smooth;
 }
+
 #top {
   background: #151720;
-  width:100%;
+  width: 100%;
+  height: 1080px;
 }
+
 nav, .navbar-brand {
   font-size: 35px !important
 }
@@ -25,17 +28,25 @@ nav, .navbar-brand {
   background-color:#E37222;
   color:#ffffff;
 }
+
 #render {
-  margin-top: 24vh;
+  margin-top: 20vh;
+  font-size: 25px;
+  color: #ffffffa0;
+}
+
+#sentence {
   font-size: 50px;
   color: #fffffff0;
 }
+
 #commands{
   background: #e2e0df;
   display: flex;
   height:87vh;
   color:#151720 !important;
 }
+
 #footer{
   height:13vh;
   background:#151720;

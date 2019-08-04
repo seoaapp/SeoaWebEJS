@@ -21,6 +21,9 @@ const superagent = require('superagent')
 /** discord 모듈 */
 const discord = require('discord.js')
 
+/** 분필(진짜 분필) */
+const chalk = require('chalk')
+
 /** ejs 모듈 */
 const ejs = require('ejs')
 
@@ -29,6 +32,7 @@ const app = express()
 
 start((bot) => {
   app.get('/', (req, res) => {
+    console.log(chalk.yellow.bold('Request / by ' + req.ip))
     ejs.renderFile('./views/index.ejs', { superagent: superagent, process: process, bot: bot }, (err, data) => {
       if (err) console.error(err)
       res.send(data)
@@ -47,7 +51,9 @@ start((bot) => {
     res.download(__dirname + '/views/src/index.css')
   })
 
-  app.listen(PORT)
+  app.listen(PORT, () => {
+    console.log(chalk.bold.green('Service Available on http://localhost:' + PORT + '/'))
+  })
 })
 
 function start (cb) {
@@ -55,6 +61,7 @@ function start (cb) {
   bot.login(process.env.discordToken)
 
   bot.on('ready', () => {
+    console.log(chalk.blue.bold('Discord Client(' + bot.user.username + ', ' + bot.user.id + ') Connected'))
     cb(bot)
   })
 }

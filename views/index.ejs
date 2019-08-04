@@ -9,12 +9,14 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://uicdn.toast.com/tui-grid/latest/tui-grid.css" /> 
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://uicdn.toast.com/tui-grid/latest/tui-grid.js"></script>
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
@@ -23,7 +25,7 @@
     <link rel="stylesheet" href="/src/index.css">
   </head>
   <body>
-    <div id='top' class='container-fluid vh-100'>
+    <div id='top' class='container-fluid'>
       <nav class="navbar navbar-expand-sm navbar-dark">
         <a class="navbar-brand" href="./"><img src="/src/img/logo.png" height="50" width="50">SeoaBot</a>
         <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
@@ -52,14 +54,17 @@
       </nav>
       <div class="row d-flex justify-content-center text-center">
         <div class="col-md-12 nav-link" id="render">
-
-          <!--- Rendering Part -->
-
+          <p>SeoaBot은...</p>
+          <i class="fas fa-quote-left" style="margin-bottom: 20px"></i>
+          <span id="sentence"><!--- Rendering Part --></span>
+          <i class="fas fa-quote-right"></i>
         </div>
       </div>
+      <i class="fab fa-chevron-down"></i>
     </div>
     <div id="commands" class='d-flex justify-content-center' style='display: flex;align-items: center;'>
-      <table class="table table-bordered" style="margin: 30px">
+    <div id="grid"></div>
+      <table class="table" style="margin: 30px">
         <thead>
           <tr>
             <th scope="col" class='border-dark'>#</th>
@@ -130,13 +135,12 @@
     <%
       let totalSeconds = new Date(new Date() - bot.user.createdAt).getTime() / 1000
       let days = Math.floor(totalSeconds / 86400)
-      console.log(days)
     %>
     <div id="typing" class='d-none'>
-      SeoaBot은 디스코드 봇입니다<br>
-      <%= bot.guilds.size + '개의 서버에서' %><br>
-      <%= bot.users.size + '명의 사용자들에게' %><br>
-      서비스되고 있습니다
+      디스코드 음악봇입니다<br />
+      <%=  bot.channels.size + '개의 채널, ' + bot.guilds.size + '개의 서버에서' %><br />
+      <%= bot.users.size + '명의 사용자들과' %><br />
+      <%= days + '일을 함깨하고 있습니다' %>
     </div>
     <script src="/src/index.js"></script>
   </body>
